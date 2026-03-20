@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Your Perfect K-Beauty Routine</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <div class="bg-water"></div>
+
+<div class="main-wrapper">
+  
+  <div class="card-container" id="homeScreen">
+    <div class="clinical-badge"><span class="pulse-dot"></span> AI-Powered Clinical Analysis</div>
+    <h2 class="editorial-title">Your skin,<br>decoded.</h2>
+    <p class="editorial-desc">Clinical-grade K-Beauty routine curated by Smart AI Analytics. No guesswork, just results.</p>
+    <div class="process-steps">
+      <div class="step"><span>1</span> Profile</div><div class="divider"></div>
+      <div class="step"><span>2</span> Analyze</div><div class="divider"></div>
+      <div class="step"><span>3</span> Curate</div>
+    </div>
+    
+    <div class="gender-btn-group">
+      <button class="start-gender-btn" data-gender="Women">For Women</button>
+      <button class="start-gender-btn" data-gender="Men">For Men</button>
+    </div>
+
+    <div class="trust-mark"><span class="lock-icon">🔒</span> 100% Secure & Confidential</div>
+  </div>
+
+  <div class="card-container hidden" id="loadingScreen">
+    <div class="hims-spinner"></div>
+    <h2 class="editorial-title">Initializing...</h2>
+    <p class="editorial-desc">Securely connecting to the clinical database.</p>
+  </div>
+
+  <div class="card-container hidden" id="q1Screen">
+    <button class="back-btn">← Back</button>
+    <div class="progress-container"><div class="progress-bar" style="width: 16%;"></div></div>
+    <p class="step-indicator">Step 1 of 6 (Category)</p>
+    <h2 class="editorial-title" id="q1Title">What are you looking for today?</h2>
+    <p class="editorial-desc">오늘 특별히 찾고 계신 제품군은 무엇인가요?</p>
+    <button class="hims-option answer-btn q1-btn" data-target="q2-cleanser" data-category="Cleanser">Cleanser & Toner (세안 / 결 정돈)</button>
+    <button class="hims-option answer-btn q1-btn" data-target="q2-serum" data-category="Serum">Serum & Ampoule (집중 영양 / 앰플)</button>
+    <button class="hims-option answer-btn q1-btn" data-target="q2-cream" data-category="Cream">Moisturizer & Cream (장벽 강화 / 보습)</button>
+    <button class="hims-option answer-btn q1-btn" data-target="q2-suncare" data-category="SunCare">Sun Care (자외선 차단 / 선크림)</button>
+    <button class="hims-option answer-btn q1-btn" data-target="q2-makeup" data-category="Makeup" style="border-color: var(--hims-accent);">Color Cosmetics (색조 메이크업 / 쿠션)</button>
+  </div>
+
+  <div class="card-container hidden" id="q2-cleanser"><button class="back-btn">← Back</button><div class="progress-container"><div class="progress-bar" style="width: 33%;"></div></div><p class="step-indicator">Step 2 of 6</p><h2 class="editorial-title">Biggest cleansing issue?</h2><p class="editorial-desc">세안 시 가장 크게 느끼는 불편함은?</p><button class="hims-option answer-btn" data-target="q3-cleanser" data-focus="Acne">과잉 피지와 모공 속 블랙헤드 (Acne)</button><button class="hims-option answer-btn" data-target="q3-cleanser" data-focus="Dryness">세안 직후 심하게 당기는 피부 (Dryness)</button><button class="hims-option answer-btn" data-target="q3-cleanser" data-focus="Redness">세안 마찰로 인한 붉어짐 (Redness)</button><button class="hims-option answer-btn" data-target="q3-cleanser" data-focus="Atopy">물만 닿아도 가렵고 일어남 (Atopy)</button><button class="hims-option answer-btn" data-target="q3-cleanser" data-focus="Aging">세안 후에도 칙칙한 각질 (Aging)</button></div>
+  <div class="card-container hidden" id="q3-cleanser"><button class="back-btn">← Back</button><div class="progress-container"><div class="progress-bar" style="width: 50%;"></div></div><p class="step-indicator">Step 3 of 6</p><h2 class="editorial-title">Preferred texture?</h2><p class="editorial-desc">가장 선호하는 세안제 제형은?</p><button class="hims-option answer-btn" data-target="q4-cleanser">풍성하고 쫀쫀한 폼 (Foam)</button><button class="hims-option answer-btn" data-target="q4-cleanser">산뜻하고 촉촉한 워터/젤 (Gel/Water)</button><button class="hims-option answer-btn" data-target="q4-cleanser">부드럽게 녹아드는 밤/오일 (Balm)</button></div>
+  <div class="card-container hidden" id="q4-cleanser"><button class="back-btn">← Back</button><div class="progress-container"><div class="progress-bar" style="width: 66%;"></div></div><p class="step-indicator">Step 4 of 6</p><h2 class="editorial-title">Makeup removal habit?</h2><p class="editorial-desc">평소 클렌징 습관은 어떠신가요?</p><button class="hims-option answer-btn" data-target="q5-cleanser">이중 세안 필수 (메이크업 진함)</button><button class="hims-option answer-btn" data-target="q5-cleanser">간편한 1차 세안 선호 (선크림만)</button><button class="hims-option answer-btn" data-target="q5-cleanser">아침/저녁 세안제 분리 사용</button></div>
+  <div class="card-container hidden" id="q5-cleanser"><button class="back-btn">← Back</button><div class="progress-container"><div class="progress-bar" style="width: 83%;"></div></div><p class="step-indicator">Step 5 of 6</p><h2 class="editorial-title">Ideal finish?</h2><p class="editorial-desc">세안 직후 피부가 어땠으면 좋겠나요?</p><button class="hims-option answer-btn" data-target="q6-shared">뽀득하고 완벽하게 개운한 느낌</button><button class="hims-option answer-btn" data-target="q6-shared">스킨을 바른 듯 촉촉한 느낌</button><button class="hims-option answer-btn" data-target="q6-shared">유수분 밸런스가 맞는 산뜻한 느낌</button></div>
+
+  <div class="card-container hidden" id="q2-serum"><button class="back-btn">← Back</button><div class="progress-container"><div class="progress-bar" style="width: 33%;"></div></div><p class="step-indicator">Step 2 of 6</p><h2 class="editorial-title">Your primary skin goal?</h2><p class="editorial-desc">세럼으로 가장 타격하고 싶은 목표는?</p><button class="hims-option answer-btn" data-target="q3-serum" data-focus="Acne">트러블 흔적 및 피지 컨트롤 (Acne)</button><button class="hims-option answer-btn" data-target="q3-serum" data-focus="Dryness">피부 속부터 채우는 수분 (Dryness)</button><button class="hims-option answer-btn" data-target="q3-serum" data-focus="Redness">열감 및 붉은 기 즉각 진정 (Redness)</button><button class="hims-option answer-btn" data-target="q3-serum" data-focus="Atopy">손상된 지질과 장벽 복구 (Atopy)</button><button class="hims-option answer-btn" data-target="q3-serum" data-focus="Aging">잔주름 탄력 및 색소 침착 (Aging)</button></div>
+  <div class="card-container hidden" id="q3-serum"><button class="back-btn">← Back</button><div class="progress-container"><div class="progress-bar" style="width: 50%;"></div></div><p class="step-indicator">Step 3 of 6</p><h2 class="editorial-title">Preferred consistency?</h2><p class="editorial-desc">선호하는 세럼의 점도는?</p><button class="hims-option answer-btn" data-target="q4-serum">물처럼 가볍게 스며드는 워터리</button><button class="hims-option answer-btn" data-target="q4-serum">쫀쫀한 영양감의 고농축 앰플</button><button class="hims-option answer-btn" data-target="q4-serum">로션처럼 부드러운 에멀전</button></div>
+  <div class="card-container hidden" id="q4-serum"><button class="back-btn">← Back</button><div class="progress-container"><div class="progress-bar" style="width: 66%;"></div></div><p class="step-indicator">Step 4 of 6</p><h2 class="editorial-title">Active ingredients?</h2><p class="editorial-desc">현재 고기능성 성분 사용 중이신가요?</p><button class="hims-option answer-btn" data-target="q5-serum">네, 꾸준히 사용하며 잘 맞습니다</button><button class="hims-option answer-btn" data-target="q5-serum">가끔 쓰지만 따가울 때가 있습니다</button><button class="hims-option answer-btn" data-target="q5-serum">아니요, 수분/진정 제품만 사용합니다</button></div>
+  <div class="card-container hidden" id="q5-serum"><button class="back-btn">← Back</button><div class="progress-container"><div class="progress-bar" style="width: 83%;"></div></div><p class="step-indicator">Step 5 of 6</p><h2 class="editorial-title">Skin thickness?</h2><p class="editorial-desc">피부 두께는 어떤 편인가요?</p><button class="hims-option answer-btn" data-target="q6-shared">핏줄이 비칠 정도로 얇음</button><button class="hims-option answer-btn" data-target="q6-shared">보통 수준의 두께</button><button class="hims-option answer-btn" data-target="q6-shared">두껍고 튼튼한 편</button></div>
+
+  <div class="card-container hidden" id="q2-cream"><button class="back-btn">← Back</button><div class="progress-container"><div class="progress-bar" style="width: 33%;"></div></div><p class="step-indicator">Step 2 of 6</p><h2 class="editorial-title">Main role of your cream?</h2><p class="editorial-desc">보습 크림에 바라는 가장 중요한 역할은?</p><button class="hims-option answer-btn" data-target="q3-cream" data-focus="Acne">모공을 막지 않는 산뜻한 조절 (Acne)</button><button class="hims-option answer-btn" data-target="q3-cream" data-focus="Dryness">건조함을 끝장내는 극강 보습 (Dryness)</button><button class="hims-option answer-btn" data-target="q3-cream" data-focus="Redness">예민해진 피부 다독이는 진정 (Redness)</button><button class="hims-option answer-btn" data-target="q3-cream" data-focus="Atopy">피부과 시술 후 바르는 더마 재생 (Atopy)</button><button class="hims-option answer-btn" data-target="q3-cream" data-focus="Aging">탄력을 끌어올리는 리프팅 (Aging)</button></div>
+  <div class="card-container hidden" id="q3-cream"><button class="back-btn">← Back</button><div class="progress-container"><div class="progress-bar" style="width: 50%;"></div></div><p class="step-indicator">Step 3 of 6</p><h2 class="editorial-title">Ideal texture?</h2><p class="editorial-desc">가장 선호하는 텍스처를 골라주세요.</p><button class="hims-option answer-btn" data-target="q4-cream">투명하고 수분감 넘치는 젤 크림</button><button class="hims-option answer-btn" data-target="q4-cream">부드럽게 발리는 휘핑크림 제형</button><button class="hims-option answer-btn" data-target="q4-cream">연고처럼 묵직한 꾸덕한 밤</button></div>
+  <div class="card-container hidden" id="q4-cream"><button class="back-btn">← Back</button><div class="progress-container"><div class="progress-bar" style="width: 66%;"></div></div><p class="step-indicator">Step 4 of 6</p><h2 class="editorial-title">Your daily environment?</h2><p class="editorial-desc">주로 머무는 환경은 어떠신가요?</p><button class="hims-option answer-btn" data-target="q5-cream">냉난방기가 강한 실내 환경</button><button class="hims-option answer-btn" data-target="q5-cream">야외 활동이 잦은 환경</button><button class="hims-option answer-btn" data-target="q5-cream">온습도가 잘 유지되는 일반 환경</button></div>
+  <div class="card-container hidden" id="q5-cream"><button class="back-btn">← Back</button><div class="progress-container"><div class="progress-bar" style="width: 83%;"></div></div><p class="step-indicator">Step 5 of 6</p><h2 class="editorial-title">Finish preference?</h2><p class="editorial-desc">크림이 흡수된 후 피부의 느낌은?</p><button class="hims-option answer-btn" data-target="q6-shared">광채가 도는 촉촉한 물광</button><button class="hims-option answer-btn" data-target="q6-shared">실키하고 매끄러운 벨벳 느낌</button><button class="hims-option answer-btn" data-target="q6-shared">잔여물 없이 보송한 상태</button></div>
+
+  <div class="card-container hidden" id="q2-suncare"><button class="back-btn">← Back</button><div class="progress-container"><div class="progress-bar" style="width: 33%;"></div></div><p class="step-indicator">Step 2 of 6</p><h2 class="editorial-title">Biggest sunscreen issue?</h2><p class="editorial-desc">기존 선크림의 가장 불편했던 점은?</p><button class="hims-option answer-btn" data-target="q3-suncare" data-focus="Acne">유분 폭발 및 모공 막힘 트러블 (Acne)</button><button class="hims-option answer-btn" data-target="q3-suncare" data-focus="Dryness">시간 지나면 밀리거나 극심한 건조 (Dryness)</button><button class="hims-option answer-btn" data-target="q3-suncare" data-focus="Redness">눈 시림이나 피부 화끈거림 (Redness)</button><button class="hims-option answer-btn" data-target="q3-suncare" data-focus="Atopy">화학 성분 알레르기 및 가려움 (Atopy)</button><button class="hims-option answer-btn" data-target="q3-suncare" data-focus="Aging">얼굴 동동 뜨는 백탁 및 칙칙함 (Aging)</button></div>
+  <div class="card-container hidden" id="q3-suncare"><button class="back-btn">← Back</button><div class="progress-container"><div class="progress-bar" style="width: 50%;"></div></div><p class="step-indicator">Step 3 of 6</p><h2 class="editorial-title">Preferred UV Filter?</h2><p class="editorial-desc">어떤 방식의 차단제를 선호하시나요?</p><button class="hims-option answer-btn" data-target="q4-suncare">로션처럼 발리는 유기자차</button><button class="hims-option answer-btn" data-target="q4-suncare">안전하게 튕겨내는 무기자차</button><button class="hims-option answer-btn" data-target="q4-suncare">장점만 섞은 혼합자차 / 모름</button></div>
+  <div class="card-container hidden" id="q4-suncare"><button class="back-btn">← Back</button><div class="progress-container"><div class="progress-bar" style="width: 66%;"></div></div><p class="step-indicator">Step 4 of 6</p><h2 class="editorial-title">Sun exposure level?</h2><p class="editorial-desc">하루 중 야외 활동 비중은?</p><button class="hims-option answer-btn" data-target="q5-suncare">대부분 실내 (출퇴근만)</button><button class="hims-option answer-btn" data-target="q5-suncare">잦은 외출 및 운전</button><button class="hims-option answer-btn" data-target="q5-suncare">장시간 야외 스포츠 활동</button></div>
+  <div class="card-container hidden" id="q5-suncare"><button class="back-btn">← Back</button><div class="progress-container"><div class="progress-bar" style="width: 83%;"></div></div><p class="step-indicator">Step 5 of 6</p><h2 class="editorial-title">Makeup compatibility?</h2><p class="editorial-desc">선크림 위에 메이크업을 자주 하시나요?</p><button class="hims-option answer-btn" data-target="q6-shared">네, 메베 겸용 원해요 (톤업)</button><button class="hims-option answer-btn" data-target="q6-shared">안 밀리는 투명 베이스 원해요</button><button class="hims-option answer-btn" data-target="q6-shared">선크림까지만 바르고 외출합니다</button></div>
+
+  <div class="card-container hidden" id="q2-makeup"><button class="back-btn">← Back</button><div class="progress-container"><div class="progress-bar" style="width: 33%;"></div></div><p class="step-indicator">Step 2 of 6</p>
+    <h2 class="editorial-title" id="makeupQ2Title">Which area to focus on?</h2>
+    <p class="editorial-desc">오늘 가장 집중적으로 찾고 있는 메이크업 제품은?</p>
+    <button class="hims-option answer-btn mk-cat-btn" data-target="q3-makeup-base" data-focus="Base">Base Makeup (쿠션 / 파운데이션)</button>
+    <button class="hims-option answer-btn mk-cat-btn" data-target="q3-makeup-lip" data-focus="Lip">Lip Makeup (틴트 / 립스틱 / 립밤)</button>
+    <button class="hims-option answer-btn mk-cat-btn" data-target="q3-makeup-eye" data-focus="Eye">Eye Makeup (섀도우 / 아이라이너)</button>
+  </div>
+
+  <div class="card-container hidden" id="q3-makeup-base"><button class="back-btn">← Back</button><div class="progress-container"><div class="progress-bar" style="width: 50%;"></div></div><p class="step-indicator">Step 3 of 6 (Base)</p>
+    <h2 class="editorial-title">Ideal finish?</h2><p class="editorial-desc">가장 선호하는 피부 표현은?</p>
+    <button class="hims-option answer-btn mk-base-q3" data-target="q4-makeup-base">Dewy & Glow (수분 가득 맑은 물광)</button>
+    <button class="hims-option answer-btn mk-base-q3" data-target="q4-makeup-base">Soft Matte (번들거림 없는 보송함)</button>
+    <button class="hims-option answer-btn mk-base-q3" data-target="q4-makeup-base">Velvet & Flawless (우아한 세미매트)</button>
+  </div>
+  <div class="card-container hidden" id="q4-makeup-base"><button class="back-btn">← Back</button><div class="progress-container"><div class="progress-bar" style="width: 66%;"></div></div><p class="step-indicator">Step 4 of 6 (Base)</p>
+    <h2 class="editorial-title">How much coverage?</h2><p class="editorial-desc">원하시는 베이스 커버력은?</p>
+    <button class="hims-option answer-btn mk-base-q4" data-target="q5-makeup-base">Sheer / Natural (얇고 투명하게)</button>
+    <button class="hims-option answer-btn mk-base-q4" data-target="q5-makeup-base">Medium (잡티와 모공 커버)</button>
+    <button class="hims-option answer-btn mk-base-q4" data-target="q5-makeup-base">Full Coverage (완벽하게 가리기)</button>
+  </div>
+  <div class="card-container hidden" id="q5-makeup-base"><button class="back-btn">← Back</button><div class="progress-container"><div class="progress-bar" style="width: 83%;"></div></div><p class="step-indicator">Step 5 of 6 (Base)</p>
+    <h2 class="editorial-title">Your undertone?</h2><p class="editorial-desc">피부 톤(언더톤)에 가까운 것은?</p>
+    <button class="hims-option answer-btn mk-base-q5" data-target="q6-shared">Cool Tone (핑크/화사한 톤)</button>
+    <button class="hims-option answer-btn mk-base-q5" data-target="q6-shared">Warm Tone (옐로우/차분한 톤)</button>
+    <button class="hims-option answer-btn mk-base-q5" data-target="q6-shared">Neutral / Not Sure (잘 모름)</button>
+  </div>
+
+  <div class="card-container hidden" id="q3-makeup-lip"><button class="back-btn">← Back</button><div class="progress-container"><div class="progress-bar" style="width: 50%;"></div></div><p class="step-indicator">Step 3 of 6 (Lip)</p>
+    <h2 class="editorial-title">Preferred lip texture?</h2><p class="editorial-desc">가장 선호하는 립 제형은?</p>
+    <button class="hims-option answer-btn mk-lip-q3" data-target="q4-makeup-lip">Glossy / Tanghulu (반짝이는 물광)</button>
+    <button class="hims-option answer-btn mk-lip-q3" data-target="q4-makeup-lip">Blur / Velvet (부드럽게 번지는 블러링)</button>
+    <button class="hims-option answer-btn mk-lip-q3" data-target="q4-makeup-lip">Matte / Fixing (묻어남 없는 매트)</button>
+  </div>
+  <div class="card-container hidden" id="q4-makeup-lip"><button class="back-btn">← Back</button><div class="progress-container"><div class="progress-bar" style="width: 66%;"></div></div><p class="step-indicator">Step 4 of 6 (Lip)</p>
+    <h2 class="editorial-title">Favorite color mood?</h2><p class="editorial-desc">평소 잘 어울리는 립 컬러 톤은?</p>
+    <button class="hims-option answer-btn mk-lip-q4" data-target="q5-makeup-lip">Spring/Summer (생기 있는 코랄·피치)</button>
+    <button class="hims-option answer-btn mk-lip-q4" data-target="q5-makeup-lip">Autumn (분위기 있는 브릭·칠리)</button>
+    <button class="hims-option answer-btn mk-lip-q4" data-target="q5-makeup-lip">Winter (딥하고 도도한 플럼·체리)</button>
+  </div>
+  <div class="card-container hidden" id="q5-makeup-lip"><button class="back-btn">← Back</button><div class="progress-container"><div class="progress-bar" style="width: 83%;"></div></div><p class="step-indicator">Step 5 of 6 (Lip)</p>
+    <h2 class="editorial-title">Top priority?</h2><p class="editorial-desc">립 제품에서 가장 중요한 기능은?</p>
+    <button class="hims-option answer-btn mk-lip-q5" data-target="q6-shared">Vivid Color (보이는 그대로의 쨍한 발색)</button>
+    <button class="hims-option answer-btn mk-lip-q5" data-target="q6-shared">Long Lasting (밥 먹어도 안 지워지는 지속력)</button>
+    <button class="hims-option answer-btn mk-lip-q5" data-target="q6-shared">Moisturizing (입술이 편안한 보습력)</button>
+  </div>
+
+  <div class="card-container hidden" id="q3-makeup-eye"><button class="back-btn">← Back</button><div class="progress-container"><div class="progress-bar" style="width: 50%;"></div></div><p class="step-indicator">Step 3 of 6 (Eye)</p>
+    <h2 class="editorial-title">Key eye item?</h2><p class="editorial-desc">오늘 눈 화장에서 가장 필요한 아이템은?</p>
+    <button class="hims-option answer-btn mk-eye-q3" data-target="q4-makeup-eye">Eyeshadow Palette (활용도 높은 섀도우)</button>
+    <button class="hims-option answer-btn mk-eye-q3" data-target="q4-makeup-eye">Glitter (영롱한 애교살 포인트)</button>
+    <button class="hims-option answer-btn mk-eye-q3" data-target="q4-makeup-eye">Liner & Mascara (또렷함을 살려줄 라인)</button>
+  </div>
+  <div class="card-container hidden" id="q4-makeup-eye"><button class="back-btn">← Back</button><div class="progress-container"><div class="progress-bar" style="width: 66%;"></div></div><p class="step-indicator">Step 4 of 6 (Eye)</p>
+    <h2 class="editorial-title">Biggest eye concern?</h2><p class="editorial-desc">아이 메이크업 시 가장 큰 고민은?</p>
+    <button class="hims-option answer-btn mk-eye-q4" data-target="q5-makeup-eye">Smudging (오후만 되면 팬더처럼 번짐)</button>
+    <button class="hims-option answer-btn mk-eye-q4" data-target="q5-makeup-eye">Creasing (쌍꺼풀 라인에 끼임)</button>
+    <button class="hims-option answer-btn mk-eye-q4" data-target="q5-makeup-eye">Flat Look (밋밋하고 부어 보이는 눈매)</button>
+  </div>
+  <div class="card-container hidden" id="q5-makeup-eye"><button class="back-btn">← Back</button><div class="progress-container"><div class="progress-bar" style="width: 83%;"></div></div><p class="step-indicator">Step 5 of 6 (Eye)</p>
+    <h2 class="editorial-title">Favorite eye mood?</h2><p class="editorial-desc">가장 선호하는 아이 메이크업 컬러는?</p>
+    <button class="hims-option answer-btn mk-eye-q5" data-target="q6-shared">Warm Brown (따뜻한 브라운·음영)</button>
+    <button class="hims-option answer-btn mk-eye-q5" data-target="q6-shared">Coral & Rose (화사한 코랄·로즈)</button>
+    <button class="hims-option answer-btn mk-eye-q5" data-target="q6-shared">Cool Mauve (그윽한 애쉬·모브)</button>
+  </div>
+
+  <div class="card-container hidden" id="q6-shared">
+    <button class="back-btn">← Back</button>
+    <div class="progress-container"><div class="progress-bar" style="width: 100%;"></div></div>
+    <p class="step-indicator">Step 6 of 6</p>
+    <h2 class="editorial-title" id="q6Title">How many steps in your routine?</h2>
+    <p class="editorial-desc">평소 몇 개의 화장품을 겹쳐 바르시나요?</p>
+    <button class="hims-option answer-btn q6-btn" data-target="analyzeScreen">1-2 Steps (스킨·크림 1~2개로 끝내는 미니멀리스트)</button>
+    <button class="hims-option answer-btn q6-btn" data-target="analyzeScreen">3-4 Steps (토너·세럼·크림 3~4개를 바르는 베이직)</button>
+    <button class="hims-option answer-btn q6-btn" data-target="analyzeScreen">5+ Steps (앰플·아이크림 등 5단계 이상 레이어링)</button>
+  </div>
+
+  <div class="card-container hidden" id="analyzeScreen">
+    <div class="hims-spinner"></div>
+    <h2 class="editorial-title">Curating...</h2>
+    <p class="editorial-desc" id="dynamicLoadingText" style="min-height: 40px; font-weight: 500; color: var(--hims-bronze); transition: opacity 0.3s ease;">Scanning your clinical profile...</p>
+    <div style="width: 100%; height: 4px; background: rgba(0,0,0,0.05); border-radius: 4px; margin-top: 10px; overflow: hidden;">
+       <div id="loadingFill" style="height: 100%; width: 0%; background: var(--hims-accent); transition: width 4.5s cubic-bezier(0.1, 0.7, 0.1, 1);"></div>
+    </div>
+  </div>
+
+  <div class="card-container hidden" id="resultScreen">
+    <div class="clinical-badge" style="margin-bottom: 15px;">Analysis Complete</div>
+    <h2 class="editorial-title" id="routineTitle">Your Perfect Matches</h2>
+    <p class="editorial-desc">고객님의 진단 데이터를 100% 반영한 최적의 성분 솔루션입니다. 취향에 맞게 선택해 보세요.</p>
+    
+    <div class="set-bundle-title">Top 3 Recommendations</div>
+    <div id="mainProductsGrid" class="product-showcase"></div>
+
+    <div class="section-title" style="margin-top: 35px; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 5px;">Synergy Booster</div>
+    <p class="editorial-desc" style="font-size:12px; margin-bottom:15px;">위 제품 중 어떤 것을 선택하시든, 다음 제품을 함께 쓰면 효과가 200% 극대화됩니다.</p>
+    <div id="synergyProductShowcase" class="product-showcase synergy-showcase"></div>
+    
+    <div class="section-title" style="margin-top: 30px;">Explore More Options</div>
+    <div id="altProductShowcase" class="product-showcase alt-showcase"></div>
+
+    <div class="email-capture-section" id="emailCaptureSection">
+      <div class="divider" style="margin: 40px auto 20px; width: 40px;"></div>
+      <h3 class="editorial-title" style="font-size: 18px;">Save Your Routine</h3>
+      <p class="editorial-desc" style="font-size: 12px; margin-bottom: 20px;">이 완벽한 큐레이션 결과를 잊지 않도록 이메일로 저장하세요.</p>
+      
+      <div class="email-form-group" id="emailFormGroup">
+        <input type="email" id="userEmailInput" class="hims-email-input" placeholder="YOUR EMAIL ADDRESS">
+        <button id="emailSubmitBtn" class="hims-email-submit">SEND TO MY INBOX</button>
+      </div>
+      
+      <p id="emailSuccessMsg" class="hidden email-success-msg">YOUR ROUTINE HAS BEEN SENT.</p>
+    </div>
+  </div>
+
+</div>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>

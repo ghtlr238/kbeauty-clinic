@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap');
+
+:root {
+  --hims-bg: #F5F3E9;       
+  --hims-card: rgba(255, 255, 255, 0.60); 
+  --hims-text: #1D1D1B;     
+  --hims-sub: #444444;      
+  --hims-accent: #B28877;   
+  --hims-bronze: #8C6656;   
+}
+
+body {
+  background-color: var(--hims-bg); font-family: 'Inter', sans-serif;
+  display: flex; justify-content: center; align-items: center;
+  height: 100vh; margin: 0; color: var(--hims-text); -webkit-font-smoothing: antialiased;
+}
+
+.bg-water {
+  position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; 
+  background-image: url('https://images.pexels.com/photos/40784/drops-of-water-water-nature-liquid-40784.jpeg?auto=compress&cs=tinysrgb&w=1920');
+  background-size: cover; background-position: center; filter: blur(8px); opacity: 0.35; z-index: 0; pointer-events: none; 
+}
+
+.main-wrapper { width: 100%; display: flex; justify-content: center; position: relative; z-index: 10; padding: 20px 0; }
+
+.card-container {
+  text-align: center; padding: 40px 30px; background: var(--hims-card);
+  backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.7); border-radius: 16px;
+  max-width: 380px; width: 85%; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08); 
+  will-change: transform; max-height: 85vh; overflow-y: auto;
+}
+.card-container::-webkit-scrollbar { width: 4px; }
+.card-container::-webkit-scrollbar-thumb { background-color: rgba(0,0,0,0.1); border-radius: 4px; }
+
+.back-btn {
+  background: none; border: none; color: var(--hims-sub); font-size: 13px; font-weight: 500;
+  cursor: pointer; text-align: left; padding: 0; margin-bottom: 12px;
+  display: block; width: 100%; transition: color 0.2s; letter-spacing: -0.5px;
+}
+.back-btn:hover { color: var(--hims-accent); }
+
+.progress-container { width: 100%; height: 4px; background-color: rgba(178, 136, 119, 0.15); border-radius: 4px; margin-bottom: 20px; overflow: hidden; }
+.progress-bar { height: 100%; background-color: var(--hims-accent); border-radius: 4px; transition: width 0.5s ease-in-out; }
+
+.clinical-badge {
+  display: inline-flex; align-items: center; background-color: #F0EFE9; padding: 6px 14px; border-radius: 30px; 
+  font-size: 10px; font-weight: 500; color: var(--hims-bronze); margin-bottom: 20px; letter-spacing: 0.5px; text-transform: uppercase;
+}
+
+.pulse-dot { width: 6px; height: 6px; background-color: var(--hims-accent); border-radius: 50%; margin-right: 8px; animation: pulse 2s infinite; }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(178, 136, 119, 0.4); } 70% { box-shadow: 0 0 0 6px rgba(178, 136, 119, 0); } 100% { box-shadow: 0 0 0 0 rgba(178, 136, 119, 0); } }
+
+.editorial-title {
+  font-family: 'Lora', serif; font-size: 26px; font-weight: 500; line-height: 1.2; margin-bottom: 12px; letter-spacing: -0.5px;
+  background: linear-gradient(135deg, var(--hims-accent) 0%, var(--hims-bronze) 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; 
+}
+
+.editorial-desc { font-size: 13px; line-height: 1.5; color: var(--hims-sub); margin-bottom: 25px; font-weight: 300; word-break: keep-all; }
+
+/* 🤎 스텝 타이포그래피 정밀 타격 */
+.process-steps { 
+  display: flex; justify-content: center; align-items: center; gap: 8px; 
+  margin-bottom: 35px; font-size: 9px; color: rgba(140, 102, 86, 0.65); font-weight: 500; 
+  text-transform: uppercase; letter-spacing: 1.5px; 
+}
+.process-steps span { 
+  display: inline; background: transparent; color: var(--hims-bronze); 
+  width: auto; height: auto; font-size: 10.5px; font-weight: 500; 
+  margin-right: 3px; font-family: 'Lora', serif; font-style: italic; border-radius: 0; 
+}
+.divider { width: 25px; height: 1px; background-color: rgba(178, 136, 119, 0.3); }
+
+/* 🤎 게이트웨이 버튼 */
+.gender-btn-group { display: flex; gap: 12px; width: 100%; margin-top: 10px; }
+.start-gender-btn { 
+  flex: 1; padding: 16px 0; font-size: 13px; letter-spacing: 1px; text-transform: uppercase;
+  background: transparent; color: var(--hims-bronze); border: 1px solid rgba(178, 136, 119, 0.45);
+  border-radius: 8px; font-weight: 500; cursor: pointer; transition: all 0.3s ease; 
+}
+.start-gender-btn:hover { background-color: var(--hims-accent); color: #fff; border-color: var(--hims-accent); } 
+
+/* 🤎 하단 보안 문구 */
+.trust-mark {
+  margin-top: 25px; font-size: 9px;
+  color: rgba(140, 102, 86, 0.55); 
+  font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase;
+  display: flex; justify-content: center; align-items: center;
+}
+.lock-icon {
+  font-size: 9.5px; margin-right: 5px;
+  filter: grayscale(30%) opacity(0.6); 
+}
+
+/* 옵션 버튼 및 로딩 */
+.hims-option {
+  background: transparent; color: var(--hims-text); border: 1px solid #D6D3CB; padding: 14px; margin-bottom: 10px; border-radius: 8px; font-size: 13.5px; font-weight: 500; width: 100%; text-align: center; cursor: pointer; transition: all 0.2s ease; line-height: 1.3;
+}
+.hims-option:hover { border-color: var(--hims-text); background-color: #fbfbf8; }
+
+.hims-spinner { width: 36px; height: 36px; border: 2px solid rgba(178, 136, 119, 0.2); border-top-color: var(--hims-accent); border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 30px auto; }
+@keyframes spin { 100% { transform: rotate(360deg); } }
+
+.hidden { display: none !important; }
+
+/* 공통 섹션 및 상품 진열장 - 이모티콘 싹 뺐습니다! */
+.section-title { font-size: 14px; font-weight: 600; text-transform: uppercase; color: var(--hims-bronze); text-align: left; letter-spacing: 0.5px;}
+.set-bundle-title { background-color: #1D1D1B; color: white; padding: 10px 15px; border-radius: 8px; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; display: inline-block; width: 100%; box-sizing: border-box; }
+
+.product-showcase { display: flex; flex-direction: column; gap: 12px; margin-bottom: 10px; }
+
+.product-item { display: flex; flex-direction: column; background: rgba(255, 255, 255, 0.95); border: 1px solid #E8E5DC; border-radius: 12px; padding: 14px; text-align: left; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
+.product-header { display: flex; align-items: center; margin-bottom: 8px; }
+.product-img { width: 60px; height: 60px; border-radius: 8px; object-fit: cover; margin-right: 12px; border: 1px solid #eee; background-color: #fff;}
+.product-info { flex-grow: 1; }
+.product-step-badge { font-size: 10px; color: white; background-color: var(--hims-accent); padding: 3px 8px; border-radius: 12px; font-weight: bold; letter-spacing: 0.5px; display: inline-block; margin-bottom: 4px; }
+.product-name { font-size: 13.5px; font-weight: 600; color: var(--hims-text); margin: 0 0 2px 0; line-height: 1.3;}
+.product-price { font-size: 12px; font-weight: 400; color: var(--hims-sub); }
+.match-reason { background-color: #F8F7F3; padding: 8px 10px; border-radius: 6px; font-size: 11.5px; color: var(--hims-bronze); margin-bottom: 10px; border-left: 3px solid var(--hims-accent); line-height: 1.4; font-weight: 500; }
+
+.kbeauty-link-btn { display: block; width: 100%; background-color: #1D1D1B; color: white; text-align: center; padding: 10px; border-radius: 8px; text-decoration: none; font-size: 12px; font-weight: 500; transition: background 0.2s; box-sizing: border-box; }
+.kbeauty-link-btn:hover { background-color: var(--hims-accent); }
+
+.synergy-showcase .product-item { background: linear-gradient(135deg, #F8F7F3 0%, #ffffff 100%); border: 1px dashed var(--hims-bronze); }
+.synergy-showcase .product-step-badge { background-color: transparent; border: 1px solid var(--hims-bronze); color: var(--hims-bronze); }
+.synergy-showcase .match-reason { background-color: transparent; border-left: none; padding: 0; font-size: 12px; margin-bottom: 12px; color: #1D1D1B; font-weight: 400; border-top: 1px solid #eee; padding-top: 8px;}
+.synergy-showcase .kbeauty-link-btn { background-color: var(--hims-accent); }
+
+.alt-showcase .product-item { background: rgba(255, 255, 255, 0.6); padding: 12px; margin-bottom: -4px; border-color: transparent; border-bottom: 1px solid #eee; border-radius: 0; box-shadow: none; }
+.alt-showcase .product-item:last-child { border-bottom: none; }
+.alt-showcase .product-header { margin-bottom: 8px; }
+.alt-showcase .product-img { width: 50px; height: 50px; border-radius: 6px; }
+.alt-showcase .product-name { font-size: 13px; font-weight: 500; margin-bottom: 2px;}
+.alt-showcase .product-price { font-size: 12px; }
+.alt-showcase .kbeauty-link-btn { background-color: #f0f0f0; color: #333; padding: 8px; font-size: 12px; margin-top: 4px; border: 1px solid #ddd;}
+.alt-showcase .kbeauty-link-btn:hover { background-color: #e0e0e0; }
+
+/* 🎯 [이메일 수집 폼 럭셔리 스타일링] */
+.email-capture-section { text-align: center; padding-bottom: 20px; }
+.email-form-group { display: flex; flex-direction: column; gap: 10px; width: 100%; margin-top: 10px;}
+.hims-email-input { 
+  padding: 14px; background: transparent; border: 1px solid rgba(178, 136, 119, 0.4); 
+  border-radius: 8px; font-family: 'Inter', sans-serif; font-size: 12px; 
+  color: var(--hims-text); text-align: center; letter-spacing: 1px; outline: none;
+  transition: border-color 0.3s ease; box-sizing: border-box; width: 100%;
+}
+.hims-email-input::placeholder { color: rgba(140, 102, 86, 0.5); font-weight: 400; text-transform: uppercase; }
+.hims-email-input:focus { border-color: var(--hims-bronze); }
+.hims-email-submit {
+  padding: 14px; background: var(--hims-text); color: white; border: none; 
+  border-radius: 8px; font-size: 12px; font-weight: 500; letter-spacing: 1.5px; 
+  cursor: pointer; transition: all 0.3s; text-transform: uppercase; width: 100%;
+}
+.hims-email-submit:hover { background: var(--hims-bronze); }
+.email-success-msg { font-size: 12px; color: var(--hims-bronze); font-weight: 500; margin-top: 15px; letter-spacing: 1px; text-transform: uppercase;}
